@@ -3,6 +3,10 @@ import random
 
 pygame.init()
 
+screen = pygame.display.set_mode((800, 650)) 
+pygame.display.set_caption('Christmas Time')
+
+
 brown = [82, 50, 27]
 white = [255, 255, 255]
 red = [237, 22, 7]
@@ -18,10 +22,7 @@ light_blue = [173, 216, 230]
 dark_green = [0, 100, 0]
 
 deco_colours = [red, blue, yellow, purple, green, orange, pink, cyan, magenta, light_blue]
-
-
-screen = pygame.display.set_mode((800, 650)) 
-pygame.display.set_caption('Christmas Time')
+num = int(input("Enter the number of tree segments you want (1/2/3): "))
 
 x1,x2 = 250,520
 y1,y2, y3 = 430,430, 250
@@ -53,19 +54,14 @@ def draw_tree(num, x1, x2, y1, y2, y3):
             y1 -= 80
             y2 -= 80
         
-
         tree_tip_x.append(x1)
         tree_tip_x.append(x2)
         tree_tip_x.append(385)
         tree_tip_y.append(y1)
         tree_tip_y.append(y2)
-        if num == 1:
-            tree_tip_y.append(250)
-        else:
-            tree_tip_y.append(250-(50*(num)))
+        tree_tip_y.append(250-(50*(num)))
         pygame.draw.polygon(screen,dark_green, ((x1, y1), (x2, y2), (385, y3)))
     
-
 def snow():
     x = random.randint(25, 775)
     y = 0
@@ -81,13 +77,12 @@ def update_snowflakes():
             screen.set_at((random.randrange(snowflake[0]-5, snowflake[0]+5), random.randrange(550, 600)), white)
             snowflakes.remove(snowflake)
 
-def draw_deco(tree_tip_x, tree_tip_y, deco_colours):
+def draw_deco(tree_tip_x, tree_tip_y, deco_colours,num):
     i = random.randint(0, 9)
     colour = deco_colours[i]
-
-    for j in range(0, 9):
+    end = (2*num)+2
+    for j in range(0, len(tree_tip_x[0:end])):
         pygame.draw.circle(screen, colour, (tree_tip_x[j], tree_tip_y[j]), 10)
-
 
 running = True
 while running: 
@@ -101,8 +96,8 @@ while running:
         check = True
     snow()
     update_snowflakes()
-    draw_tree(3, x1, x2, y1, y2, y3)
-    draw_deco(tree_tip_x, tree_tip_y, deco_colours)
+    draw_tree(num, x1, x2, y1, y2, y3)
+    draw_deco(tree_tip_x, tree_tip_y, deco_colours, num)
     
     pygame.display.flip()
 
