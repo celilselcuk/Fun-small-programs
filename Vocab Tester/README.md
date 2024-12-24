@@ -67,3 +67,6 @@ Correct!
 Your answer (separate multiple answers with commas): neither
 Incorrect --> 'neither' is incorrect or incomplete. Best match is 'nor/and not/neither'
 The correct definition is: nor/and not/neither
+```
+## Exiting
+To exit, close the terminal or press ``` CTRL C ```
