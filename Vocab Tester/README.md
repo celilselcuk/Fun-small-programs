@@ -28,9 +28,6 @@ This is a Python-based vocabulary tester designed to quiz you on the meanings of
    | prope + accusative         | near                         |
 
    - Any additional columns (C, D, etc.) will **not** be read by the program.
-   - Reference the image below for clarity:
-
-   ![Excel Format](file-K7Cj9UtGvjBEN4wpbnNxAa)
 
 3. **Run the Program**:
    - Save the provided Python code in a `.py` file (e.g., `vocab_tester.py`).
