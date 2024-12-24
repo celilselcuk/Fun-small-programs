@@ -28,7 +28,7 @@ This is a Python-based vocabulary tester designed to quiz you on the meanings of
    | prope + accusative         | near                         |
 
    - Any additional columns (C, D, etc.) will **not** be read by the program.
-   - Note: do not be confused by the comma separations in some examples. These are just for clarifications in the Latin word.
+   - **Note**: do not be confused by the comma separations in some examples. These are just for clarifications in the Latin word.
 
 3. **Run the Program**:
    - Save the provided Python code in a `.py` file (e.g., `vocab_tester.py`).
