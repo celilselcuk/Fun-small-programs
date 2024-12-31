@@ -18,7 +18,7 @@ This is a Python-based vocabulary tester designed to quiz you on the meanings of
    - Words should be in **Column A**, and their corresponding definitions should be in **Column B**.
    - If a word has multiple meanings, separate them using `/` without spaces (e.g., `advance/progress`).
 
-   **Example of Proper Format** (from the provided image):
+   **Example of Proper Format**:
 
    | A                          | B                            |
    |----------------------------|------------------------------|
@@ -28,7 +28,7 @@ This is a Python-based vocabulary tester designed to quiz you on the meanings of
    | prope + accusative         | near                         |
 
    - Any additional columns (C, D, etc.) will **not** be read by the program.
-   - **Note**: do not be confused by the comma separations in some examples. These are just for clarifications in the Latin word.
+   - **Note**: do not be confused by the comma separations in some examples. These are just for clarifications in the Latin words.
 
 3. **Run the Program**:
    - Save the provided Python code in a `.py` file (e.g., `vocab_tester.py`).
